@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athletes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: flex;
+      overflow-x: auto; /* Enable horizontal scrolling */
+      padding: 20px;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      gap: 30px; /* Increased gap between athlete sections */
+      align-items: center; /* Center the athlete sections vertically */
+    }
+
+    .athlete {
+      background-color: white;
+      border-radius: 20px; /* Round the edges more */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 450px; /* Increase the width */
+      height: 250px; /* Increase the height */
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .athlete:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .athlete img {
+      width: 120px; /* Increase image size */
+      height: 120px; /* Increase image size */
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .athlete-name {
+      font-size: 1.5em; /* Larger font size */
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .athlete-details {
+      font-size: 1.1em; /* Increase font size */
+      color: #666;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="requests.html">Requests</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="performance.html">Performance</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="athletes.html">Athletes</a></li>
+</ul>
+    </nav>
+  </header>
+
+  <!-- Page Main Content -->
+  <main>
+    <div class="athlete">
+      <img src="athlete1.jpg" alt="Athlete A">
+      <div class="athlete-name">Athlete A</div>
+      <div class="athlete-details">Age: 25<br>Game Type: Running<br>Rating: 4.5/5</div>
+    </div>
+
+    <div class="athlete">
+      <img src="athlete2.jpg" alt="Athlete B">
+      <div class="athlete-name">Athlete B</div>
+      <div class="athlete-details">Age: 28<br>Game Type: Swimming<br>Rating: 4.7/5</div>
+    </div>
+
+    <div class="athlete">
+      <img src="athlete3.jpg" alt="Athlete C">
+      <div class="athlete-name">Athlete C</div>
+      <div class="athlete-details">Age: 23<br>Game Type: Cycling<br>Rating: 4.2/5</div>
+    </div>
+
+    <!-- Additional athletes can be added here in the same format -->
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Athletics Admin Dashboard</p>
+  </footer>
+</body>
+</html>

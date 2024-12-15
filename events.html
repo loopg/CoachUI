@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Ensure this is correct -->
+  <style>
+    /* Header Section */
+    header {
+      background: linear-gradient(to right, #343a40, #3d3d72); /* Matching your previous gradient */
+      padding: 15px 20px;
+      border-bottom: 2px solid #ddd;
+    }
+
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center; /* Centered the nav items */
+      margin: 0;
+      padding: 0;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      color: #f1c40f; /* Hover color */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 36px;
+      color: #3d3d72;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #searchBar {
+      display: block;
+      margin: 20px auto;
+      padding: 12px;
+      width: 60%;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: box-shadow 0.3s, border-color 0.3s;
+      background: #f9f9f9;
+    }
+
+    #searchBar:focus {
+      border-color: #3d3d72;
+      box-shadow: 0 0 10px rgba(61, 61, 114, 0.5);
+      outline: none;
+    }
+
+    #eventTiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .event-tile {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      border-radius: 12px;
+      overflow: hidden;
+      color: white;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .event-tile:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .event-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .event-info h3 {
+      font-size: 24px;
+      padding: 15px 10px;
+      margin: 0;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    footer p {
+      font-size: 14px;
+      margin: 0;
+      padding: 10px;
+      color: #fff;
+      background: linear-gradient(to right, #3498db, #8e44ad);
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="requests.html">Requests</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="performance.html">Performance</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="athletes.html">Athletes</a></li>
+</ul>
+    </nav>
+  </header>
+
+  <!-- Page Main Content -->
+  <main>
+    <h1>Explore Our Events</h1>
+    <input type="text" id="searchBar" placeholder="Search Events by Name" oninput="filterEvents()" />
+
+    <div id="eventTiles">
+      <div class="event-tile" onclick="location.href='upcoming.html'">
+        <img src="https://via.placeholder.com/300x200?text=Upcoming+Events" alt="Upcoming Events" class="event-image">
+        <div class="event-info">
+          <h3>Upcoming Events</h3>
+        </div>
+      </div>
+      <div class="event-tile" onclick="location.href='ongoing.html'">
+        <img src="https://via.placeholder.com/300x200?text=Ongoing+Events" alt="Ongoing Events" class="event-image">
+        <div class="event-info">
+          <h3>Ongoing Events</h3>
+        </div>
+      </div>
+      <div class="event-tile" onclick="location.href='completed.html'">
+        <img src="https://via.placeholder.com/300x200?text=Completed+Events" alt="Completed Events" class="event-image">
+        <div class="event-info">
+          <h3>Completed Events</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Athletics Admin Dashboard. All Rights Reserved.</p>
+  </footer>
+
+  <script src="events.js"></script>
+</body>
+</html>
